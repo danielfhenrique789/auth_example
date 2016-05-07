@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
+    script(type="text/javascript" src="/bootstrap/js/bootstrap.js")
+  body
+    div(class="navbar navbar-inverse navbar-fixed-top")
+        div(class="container")
+            div(class="navbar-header")
+                a(href="/" class="navbar-brand") AddPeople
+    div(class="container")
+        block content
+        footer
+            div(class="container")
+                p Desenvolvido por Daniel
+

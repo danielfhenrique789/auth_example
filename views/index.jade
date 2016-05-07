@@ -1,0 +1,27 @@
+extends layout
+<script id="_carbonads_projs" type="text/javascript" src="//srv.buysellads.com/ads/C6AILKT.json?segment=placement:bootswatchcom&amp;callback=_carbonads_go"></script>
+block content
+    h1= title
+        p Bem vindo ao AddPeople
+    div(class="container")
+        div(class="col-lg-6")
+            div(class="well bs-component")
+                if error
+                    div(class="alert alert-dismissible alert-danger")
+                        button(type="button" class="close" data-dismiss="alert") &times;
+                        strong #{error}
+                form(class="form-horizontal" method="POST" action="authenticate")
+                  fieldset
+                    legend Login
+                    div(class="form-group")
+                        label(class="col-lg-2 control-label" for="email") Email
+                        div(class="col-lg-10")
+                            input(class="form-control" type="email" id="email" name="email" placeholder="Email")
+                    div(class="form-group")
+                        label(class="col-lg-2 control-label" for="password") Senha
+                        div(class="col-lg-10")
+                            input(class="form-control" type="password" id="password" name="password" placeholder="Senha")
+                    div(class="form-group")
+                        button(type="submit" class="btn btn-primary") Enviar
+                    div(class="form-group")
+                        a(href="register") Registrar
